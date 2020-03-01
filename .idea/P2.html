@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina2</title>
+</head>
+<body>
+<button id="iii">Da Click</button>
+Pagina 2 este o pagina noua
+<a href="index.html">Viziteaza pagina 1 index</a>
+<a href="P3.html">Viziteaza pagina 3 index</a>
+
+
+<div id="app">
+    <span v-bind:title='message2'>
+    {{ message }}
+        </span>
+    <br>
+    <span v-bind:title="message3">
+    <span v-bind:style="mesajStyle">
+        <span v-if="shouldAppear">
+    {{ message2 }}
+            </span>
+        </span>
+        </span>
+    <span v-bind:title="message3">
+    <span v-if="shouldAppear2">
+        {{ message3}}
+    </span>
+        </span>
+
+    <ol>
+        <li v-for = "masinutze in masini">
+            {{masinutze.nume}}
+        </li>
+    </ol>
+
+    <ol>
+        <li v-for = "floricele in flori">
+            {{floricele.numeFloare}} ->
+            {{floricele.culoareFloare}}
+        </li>
+    </ol>
+
+
+</div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="FisierNou.js"></script>
+</html>

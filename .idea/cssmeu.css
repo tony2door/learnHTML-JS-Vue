@@ -1,0 +1,126 @@
+h1 {
+  color: brown;
+    font-family: "Comic Sans MS";
+    backface-visibility:visible ;
+    flex: auto;
+    flex-direction: column;
+    flood-color: antiquewhite;
+    text-script:213;
+}
+
+.element {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #001F3F;
+    }
+    25% {
+        background-color: darkgreen;
+    }
+    50% {
+        background-color: #7FFFD4;
+    }
+    75% {
+        backround-color: #8B0000;
+    }
+    100% {
+        background-color: #001F3F;
+    }
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(.3);
+        background-color: red;
+        border-radius: 100%;
+    }
+    50% {
+        background-color: orange;
+    }
+    100% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+}
+
+.staiCuminte {
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+/*
+  is the same as:
+*/
+
+.staiCuminte2 {
+    animation:
+            stretch
+            1.5s
+            ease-out
+            0s
+            alternate
+            infinite
+            none
+            running;
+}
+
+
+.miscaDinBuric {
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    animation:
+            pulse 200s ease infinite alternate,
+            nudge 1s linear infinite alternate;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        background-color: red;
+    }
+    50% {
+        background-color: orange;
+    }
+}
+
+@keyframes nudge {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(150px, 0);
+    }
+
+    80% {
+        transform: translate(-150px, 0);
+    }
+}
+
+
+html, body {
+    height: 50%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    text-align-all: center;
+    font-family: "Comic Sans MS";
+    flex-shrink: inherit;
+    font-variant-ligatures: no-discretionary-ligatures;
+}
+
