@@ -12,36 +12,69 @@ Pagina 2 este o pagina noua
 
 
 <div id="app">
-    <span v-bind:title='message2'>
-    {{ message }}
-        </span>
+<!--    <span v-bind:title='message2'>-->
+<!--    {{ message }}-->
+<!--        </span>-->
+<!--    <br>-->
+<!--    <span v-bind:title="message3">-->
+<!--    <span v-bind:style="mesajStyle">-->
+<!--        <span v-if="shouldAppear">-->
+<!--    {{ message2 }}-->
+<!--            </span>-->
+<!--        </span>-->
+<!--        </span>-->
+<!--    <span v-bind:title="message3">-->
+<!--    <span v-if="shouldAppear2">-->
+<!--        {{ message3}}-->
+<!--    </span>-->
+<!--        </span>-->
+
+<!--    <ol>-->
+<!--        <li v-for = "masinutze in masini">-->
+<!--            {{masinutze.nume}}-->
+<!--        </li>-->
+<!--    </ol>-->
+
+<!--    <ol>-->
+<!--        <li v-for = "floricele in flori">-->
+<!--            {{floricele.numeFloare}} ->-->
+<!--            {{floricele.culoareFloare}}-->
+<!--        </li>-->
+<!--    </ol>-->
+<!--<br>-->
+<!--    <input v-model="theObject.username">-->
+<!--    <input v-model="theObject.password">-->
+
+<!--    <span v-if="theObject.username === 'tony'">-->
+<!--        usernameu e bun-->
+<!--    </span>-->
+
+<!--    <span v-if="theObject.username === 'tony' && theObject.password === 'parola'">-->
+<!--        <span >breavo, ai ghicit</span>-->
+<!--    </span>-->
+<!--    <br>-->
+<!--    <button v-if="theObject.username === 'tony' && theObject.password === 'parola'">-->
+<!--    </button>-->
+
+<!--    <span v-if="theObject.username === 'tony' && theObject.password === 'parola'">-->
+<!--        <span > </span>-->
+<!--    </span>-->
+
+    {{merdenea}}
     <br>
-    <span v-bind:title="message3">
-    <span v-bind:style="mesajStyle">
-        <span v-if="shouldAppear">
-    {{ message2 }}
+    <input v-model="merdenea.numeMerdenea">
+    <br>
+    <button v-on:click="addMerdenea">Add merdenea</button>
+    <br>
+    {{merdenele}}
+    <br>
+    <span v-for="merdenea in merdenele">
+               <ul>
+
+        <li v-bind:merdenea="merdenea"><span>Added</span> {{merdenea.nume}}</li>
+    </ul>
+        <merdenea-component></merdenea-component>
             </span>
-        </span>
-        </span>
-    <span v-bind:title="message3">
-    <span v-if="shouldAppear2">
-        {{ message3}}
-    </span>
-        </span>
-
-    <ol>
-        <li v-for = "masinutze in masini">
-            {{masinutze.nume}}
-        </li>
-    </ol>
-
-    <ol>
-        <li v-for = "floricele in flori">
-            {{floricele.numeFloare}} ->
-            {{floricele.culoareFloare}}
-        </li>
-    </ol>
-
 
 </div>
 

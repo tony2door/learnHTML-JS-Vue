@@ -1,32 +1,28 @@
+Vue.component('merdeneaComponent',{
+    props: ['merdenea'],
+    template: ''
+})
+
 
 
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue',
-        mesajStyle: 'color: blue',
-        message2: 'asl pls',
-        message3: 'cf',
-        shouldAppear : true,
-        shouldAppear2 : false,
-        masini: [
-            {
-                nume: "Skoda"
-            },
-            {
-                nume: "mertz"
-            }
-        ],
+        merdenea:{
+            numeMerdenea: '',
+        },
+        merdenele: []
+    },
 
-        flori: [
-            {
-                numeFloare: "papadie",
-                culoareFloare: "alb"
-            },
-            {
-                numeFloare: "trandafir",
-                culoareFloare: "rosu"
-            }
-        ]
+    methods :{
+        addMerdenea : function () {
+        this.merdenele.push({
+            nume : this.merdenea.numeMerdenea
+        });
+        this.merdenea.numeMerdenea='';
+        }
     }
+
 })
+
+
