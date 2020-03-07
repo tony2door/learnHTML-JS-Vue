@@ -1,6 +1,6 @@
 Vue.component('merdeneaComponent',{
-    props: ['merdenea'],
-    template: ''
+    props: ['viorica'],
+    template: '<li>Added {{viorica.nume}}</li>'
 })
 
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tema</title>
+</head>
+<body>
+<div id = "app">
+
+<span>Nume Elev</span>
+<input v-model="elev.numeElev">
+    <br>
+    <span>Nume Clasa</span>
+<input v-model="clasa.numeClasa">
+    <br>
+    <span>Nume Materie</span>
+<input v-model="materie.numeMaterie">
+    <br>
+<button v-on:click="addElev(); addClasa(); addMaterie();">Add elev</button>
+    <br>
+    {{elev.numeElev}}
+    {{clasa.numeClasa}}
+    {{materie.numeMaterie}}
+    {{numeElevi}}
+    {{numeClase}}
+    {{numeMaterii}}
+
+    <span v-for="numeElev in numeElevi">
+        <span v-for="numeClasa in numeClase">
+
+        <table>
+            <tr>
+                <th colspan="2">Nume</th>
+                <th>Nume Clasa</th>
+                <th>Nume Materie</th>
+            </tr>
+
+
+            <tr>
+                <td v-bind:elev="elev"> {{numeElev.nume}} </td>
+            </tr>
+
+            <tr>
+                <td v-bind:numeleClasei="numeClasa">{{numeClasa.numeleClasei}}</td>
+            </tr>
+
+        </table>
+</span>
+        </span>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="Tema.js"></script>
+</html>

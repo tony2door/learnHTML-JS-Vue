@@ -68,13 +68,11 @@ Pagina 2 este o pagina noua
     <br>
     {{merdenele}}
     <br>
-    <span v-for="merdenea in merdenele">
-               <ul>
 
-        <li v-bind:merdenea="merdenea"><span>Added</span> {{merdenea.nume}}</li>
-    </ul>
-        <merdenea-component></merdenea-component>
-            </span>
+        <merdenea-component v-for="vinDiesel in merdenele"
+        v-bind:viorica="vinDiesel"
+        ></merdenea-component>
+
 
 </div>
 
