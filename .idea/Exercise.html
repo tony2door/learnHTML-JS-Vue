@@ -8,7 +8,7 @@
 
 <div id="app">
 
-    <span>
+
     {{ info.data.time.updated }}
     <br>
     {{ info.data.bpi.USD.code }}
@@ -19,12 +19,12 @@
     <br>
     {{ info.status }}
     <br>
-    {{ info.data.bpi.USD.code }} Rate:
-    {{ info.data.bpi.USD.rate }} <span v-html="info.data.bpi.USD.symbol"></span>
-    <br>
-    {{ info.data.bpi.EUR.code }} Rate:
-    {{ info.data.bpi.EUR.rate }} <span v-html="info.data.bpi.EUR.symbol"></span>
+        <span v-for="currency in info.data.bpi">
+            {{currency.code}} Rate:
+            {{currency.rate}}
+            <br>
         </span>
+        <br>
 
     </section>
 </div>
