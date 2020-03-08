@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <span>
+    {{ info.data.time.updated }}
+    <br>
+    {{ info.data.bpi.USD.code }}
+    {{ info.data.bpi.USD.rate }}
+    <br>
+    {{ info.data.bpi.EUR.code }}
+    {{ info.data.bpi.EUR.rate }}
+    <br>
+    {{ info.status }}
+    <br>
+    {{ info.data.bpi.USD.code }} Rate:
+    {{ info.data.bpi.USD.rate }} <span v-html="info.data.bpi.USD.symbol"></span>
+    <br>
+    {{ info.data.bpi.EUR.code }} Rate:
+    {{ info.data.bpi.EUR.rate }} <span v-html="info.data.bpi.EUR.symbol"></span>
+        </span>
+
+    </section>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="Exercise.js"></script>
+</html>

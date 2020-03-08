@@ -22,6 +22,10 @@ var app = new Vue({
             this.produs.numeProdus = '';
             this.produs.cantitate = '',
                 console.log('se vede motzu')
+        },
+
+        stergeProdus: function () {
+        this.produse.delete(produse)
         }
     }
 })

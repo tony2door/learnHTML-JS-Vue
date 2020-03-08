@@ -9,8 +9,9 @@
     <input v-model="produs.numeProdus" placeholder="nume produs">
     <input v-model="produs.cantitate" placeholder="cantitate produs">
     <button v-on:click="addProdus">Add to list</button>
+    <button v-on:click="">Delete</button>
 
-    <table border="5">
+    <table border="1">
 
         <tbody>
         <tr>
@@ -18,7 +19,7 @@
             <th>Cantitate</th>
         </tr>
 
-        <tr is="cumparaturi-component" v-for="prod in produse" v-bind:item="prod"></tr>
+        <tr is="cumparaturi-component" v-for="prod in produse" v-bind:item="prod" v-on:remove="produse.splice(prod)"></tr>
 
         </tbody>
     </table>
